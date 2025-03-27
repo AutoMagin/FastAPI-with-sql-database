@@ -1,0 +1,22 @@
+get http://127.0.0.1:8000/
+
+###
+
+post http://127.0.0.1:8000/team/
+Content-Type: application/json
+
+{
+    "name": "Вороны",
+    "city": "Архангельск",
+    "sports": "Баскетбол",
+    "founded_year": 2013,
+    "championships": 0
+}
+
+
+###
+get http://127.0.0.1:8000/team/1
+
+###
+
+DELETE http://127.0.0.1:8000/team/2

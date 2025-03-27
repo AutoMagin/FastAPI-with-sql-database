@@ -1,12 +1,6 @@
 {
     "python.analysis.autoImportCompletions": true,
-    "python.testing.unittestArgs": [
-        "-v",
-        "-s",
-        ".",
-        "-p",
-        "*_test.py"
-    ],
+
     "python.testing.pytestEnabled": false,
     "python.testing.unittestEnabled": true,
     "sqltools.connections": [
@@ -20,5 +14,8 @@
             "username": "postgres",
             "connectionTimeout": 30
         }
-    ]
+    ],
+    "rest-client.certificates": {
+
+    }
 }
