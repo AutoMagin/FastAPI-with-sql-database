@@ -1,7 +1,14 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
+from app.database import engine
+from app import models
+from app.routers import team
 
+models.Base.metadata.create_all(bind=engine)
+ 
 app = FastAPI()
 
+app.include_router(team.router, prefix="/team", tags=["team"])
+
 @app.get("/")
-def zakaz():
-    raise HTTPException(status_code=403, detail="По приколу")
+def root():
+    return {"message": "Добро пожаловать на сайт для управления командами!"}
